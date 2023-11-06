@@ -6,3 +6,21 @@
 //
 
 
+#ifndef head_hpp
+#define head_hpp
+
+#include "func.hpp"
+#include "math.h"
+#include <iostream>
+
+struct returnans {
+    double root;
+    int n;
+};
+
+returnans binary(int k, double eps);
+double func(double x, int k);
+returnans iterations(int k, double eps);
+returnans newton(int k, double eps);
+
+#endif

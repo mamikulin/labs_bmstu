@@ -5,8 +5,7 @@
 //  Created by Mike Mikulin on 04.10.2023.
 //
 
-#include "func.hpp"
-
+#include "head.hpp"
 
 
 double func(double x, int k){

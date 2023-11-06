@@ -5,9 +5,7 @@
 //  Created by Mike Mikulin on 03.10.2023.
 //
 
-#include "iterations.hpp"
-
-
+#include "head.hpp"
 
 returnans iterations(int k, double eps){
     returnans iterationsans;

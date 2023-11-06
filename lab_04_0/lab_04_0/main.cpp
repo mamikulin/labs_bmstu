@@ -3,11 +3,12 @@
 #include <sstream>
 #include <iomanip>
 
-#include "iterations.hpp"
-#include "binary.hpp"
-#include "newton.hpp"
-
-#include "struct_returnans.hpp"
+//#include "iterations.hpp"
+//#include "binary.hpp"
+//#include "newton.hpp"
+//
+//#include "struct_returnans.hpp"
+#include "head.hpp"
 
 int main() {
     while (true){

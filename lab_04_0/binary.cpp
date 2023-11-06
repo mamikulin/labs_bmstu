@@ -5,7 +5,7 @@
 //  Created by Mike Mikulin on 03.10.2023.
 //
 
-#include "binary.hpp"
+#include "head.hpp"
 
 returnans binary(int k, double eps){
     returnans binaryans;

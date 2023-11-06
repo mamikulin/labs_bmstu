@@ -5,9 +5,7 @@
 //  Created by Mike Mikulin on 03.10.2023.
 //
 
-#include "newton.hpp"
-
-
+#include "head.hpp"
 
 returnans newton(int k, double eps){
     returnans newtonsr;
