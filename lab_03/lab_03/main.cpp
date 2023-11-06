@@ -9,8 +9,6 @@ void tfirst();
 void tsecond();
 void tthird();
 void tfourth();
-double y(int n);
-//int delta(int x);
 
 int main(){
     int num;
@@ -30,6 +28,8 @@ int main(){
             case 4:
                 tfourth();
                 break;
+            default:
+                std::cout << "такого задания нет" << '\n';
         }
     }
 }
@@ -84,37 +84,21 @@ void tsecond(){
 
 void tfourth(){
     char yorn;
-    
-//    std::cout << "n = 3:" << std::fixed << std::setw(16) << y(3) << std::endl;
-//    std::cout << "n = 5:" << std::fixed <<std::setw(16)<< y(5) << std::endl;
-//    std::cout << "n = 10:" << std::fixed << std::setw(15) << y(10) << std::endl;
-//
     do{
         int n;
         std::cout<<"n: ";
         std::cin>>n;
-//
-//        std::cout << y(n) << std::endl;
-//
         double ans = 0;
         for(int i = n; i >= 0; --i){
-            
             ans = sqrt(ans + 2 * i + 1);
-        
         }
         std::cout<< ans <<'\n';
         std::cout << "продолжить? y/n: ";
         std::cin >> yorn;
     } while( yorn == 'y');
-    
 }
 
-
-
-
 void tthird(){
-    
-    
     for (double x = 0; x <= 1; x+=0.2){
         int n = 1;
         double eps = std::pow(10, -6);
@@ -129,16 +113,13 @@ void tthird(){
             x1 *= k;
             
             n++;
-        }while (fabs(x1) > eps);
+        }while (abs(x1) > eps);
         
         std::cout<< "x: "<< std::setw(11)<<x<<std::endl;
         std::cout<< "Y(x): " << mmcpp << std::endl;
         std::cout << "S(x): " << sx << std::endl;
         std::cout << "n: "<< std::setw(11)<<n << std::endl;
         std::cout << "" << std::endl;
-        
-        
-        
     }
 }
 

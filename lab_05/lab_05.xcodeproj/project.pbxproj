@@ -33,6 +33,8 @@
 /* Begin PBXFileReference section */
 		EB6DA92A2AD1CDCD003A9AB2 /* min-max-elem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "min-max-elem.cpp"; sourceTree = "<group>"; };
 		EB6DA92B2AD1CDCD003A9AB2 /* min-max-elem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "min-max-elem.hpp"; sourceTree = "<group>"; };
+		EB8AE3052AF95A4900DE4A42 /* struct_return.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = struct_return.hpp; sourceTree = "<group>"; };
+		EB8AE3062AF95A4900DE4A42 /* struct_return.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = struct_return.cpp; sourceTree = "<group>"; };
 		EBA6CC4B2AD55A5200BFC856 /* struct_return.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = struct_return.cpp; sourceTree = "<group>"; };
 		EBA6CC4C2AD55A5200BFC856 /* struct_return.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = struct_return.hpp; sourceTree = "<group>"; };
 		EBA6CC4E2AD55D5F00BFC856 /* bubble.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bubble.cpp; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		EBB9B30E2AD097E8002909A4 = {
 			isa = PBXGroup;
 			children = (
+				EB8AE3062AF95A4900DE4A42 /* struct_return.cpp */,
+				EB8AE3052AF95A4900DE4A42 /* struct_return.hpp */,
 				EBBBEC1F2ADFFA4A009DAA49 /* hppcommon.hpp */,
 				EBBAF5CF2AD889C900C1F73A /* min_max_elem-max->min.cpp */,
 				EBBAF5D02AD889C900C1F73A /* min_max_elem-max->min.hpp */,

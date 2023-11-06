@@ -12,7 +12,7 @@
 
 
 int main() {
-    while (true){
+    
         int len;
         std::cin >> len;
         
@@ -97,6 +97,6 @@ int main() {
         delete[]mass_bubble;
         delete[]mass_min_max_elem;
         delete[]rand_gen_mass;
-    }
-    return 0;
+   
+        return 0;
 }
