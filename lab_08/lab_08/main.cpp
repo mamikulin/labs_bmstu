@@ -45,25 +45,24 @@ int main() {
     std::cout<<*(*(B+1))<<"  "<<*B[1]<<std::endl;
     std::cout<<*(B[0]+1)<<"  " <<*(*B+1)<<std::endl;
     std::cout<<B[0][20]<<"  "<<*(B[0]+20)<<"  "<<*B[2]<<std::endl;
-
-   
     
+   
 }
 void fillstaticmat(double B[10][10]){
-    double **matB = new double *[10];
+    double **mat = new double *[10];
     
     for (int i = 0; i < 10; i++){
-        matB[i] = new double[10];
+        mat[i] = new double[10];
     }
     
     for (int i = 0; i < 10; i++){
         for (int j = 0; j < 10; j++){
             
-            matB[i][j] = B[i][j];
+            mat[i][j] = B[i][j];
         }
     }
-    print(matB, 10, 'a');
-    clear(matB);
+    print(mat, 10, 'a');
+    clear(mat);
     
 }
 
