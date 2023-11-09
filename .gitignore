@@ -1,4 +1,6 @@
 /lab_07/
+/lab_04/
+/study/
 
 *.rtf
 !spec/*.rtf
