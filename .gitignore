@@ -1,7 +1,7 @@
-/lab_07/
 /lab_04/
 /study/
 
+*.DS_store
 *.rtf
 !spec/*.rtf
 
