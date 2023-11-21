@@ -9,23 +9,25 @@
 #include <iomanip>
 
 int fact(int n);
-void print(double **mat, int ij, char t);
+//template <typename T>
+void print(double **mat, int ij, char t, int p);
 void fillmat(double** mat,int ij,double x);
 void clear(double** mass);
 void fillstaticmat(double B[10][10]);
 
 int main() {
     char t;
-    int ij;
-    double x = 2;
-    std::cout << "размер матрицы    научный(s)/фиксированной точкой(any key): ";
-    std::cin >> ij >> t;
+    int ij, p;
+    
+    double x = 0.2;
+    std::cout << "размер матрицы    научный(s)/фиксированной точкой(any key)   setprecision: ";
+    std::cin >> ij >> t >> p;
     std::cout << '\n';
     
     double **mat = new double *[ij];
     
     fillmat(mat, ij, x);
-    print(mat, ij, t);
+    print(mat, ij, t, p);
     clear(mat);
     
     
@@ -37,31 +39,31 @@ int main() {
             B[i][j] = 10 * (i+1) + (j+1);
         }
     }
-    
+//    print(B, ij, t, p);
     fillstaticmat(B);
     
-    std::cout<<B<<"  "<<B[0]<<"  "<<B[2]<<std::endl;
-    std::cout<<B[0][0]<<"  "<<**B <<"  "<<*B[0]<<std::endl;
-    std::cout<<*(*(B+1))<<"  "<<*B[1]<<std::endl;
-    std::cout<<*(B[0]+1)<<"  " <<*(*B+1)<<std::endl;
-    std::cout<<B[0][20]<<"  "<<*(B[0]+20)<<"  "<<*B[2]<<std::endl;
+    std::cout<<B<<"  ";
+    std::cin>>x;
+    std::cout<<*B[8]<<"  "<<B[9]<<std::endl;
+    std::cout<<B[0][5]<<"  "<<*(*B+4) <<"  "<<*B[8]<<std::endl;
+    std::cout<<*(*(B+7))<<"  "<<*B[1]<<std::endl;
+    std::cout<<*(B[4]+1)<<"  " <<*(*B+1)<<std::endl;
+    std::cout<<B[0][20]<<"  "<<*(*B+40)<<"  "<<*B[2]<<std::endl;
     
    
 }
 void fillstaticmat(double B[10][10]){
     double **mat = new double *[10];
     
-    for (int i = 0; i < 10; i++){
-        mat[i] = new double[10];
-    }
+    
     
     for (int i = 0; i < 10; i++){
-        for (int j = 0; j < 10; j++){
+        
             
-            mat[i][j] = B[i][j];
-        }
+            mat[i] = B[i];
+    
     }
-    print(mat, 10, 'a');
+    print(mat, 10, 'a', 8);
     clear(mat);
     
 }
@@ -96,26 +98,27 @@ int fact(int n){
     }
     return r;
 }
-
-void print(double** mat, int ij, char t){
+//template <typename T>
+void print(double **mat, int ij, char t, int p){
+    int nj = std::floor(80 / static_cast<double>(p + 15));
     
-    for (int k = 0; k < std::ceil(static_cast<double>(ij) / 4.0); k++){
-        for (int n = 0; n < ij; n++){
-            for (int m = 0; m < 4; m++){
-                std::cout << std::fixed;
-                if (k * 4 + m < ij){
-                    
-                    if (t == 's'){
-                        std::cout << std::setw(20) <<std::scientific << mat[n][k * 4 + m] ;
-                    }else{
-                        std::cout << std::setw(20) <<std::setprecision(8) << mat[n][k * 4 + m] ;
+    for (int k = 0; k < std::ceil(static_cast<double>(ij) / nj); k++){
+            for (int n = 0; n < ij; n++){
+                for (int m = 0; m < nj; m++){
+                    std::cout << std::fixed;
+                    if (k * nj + m < ij){
+                        
+                        if (t == 's'){
+                            std::cout << std::setw(20) <<std::scientific << mat[n][k * nj + m] ;
+                        }else{
+                            std::cout << std::setw(20) <<std::setprecision(p) << mat[n][k * nj + m] ;
+                        }
                     }
+                    
+                    
                 }
-                
-                
+                std::cout << '\n';
             }
-            std::cout << '\n';
-        }
         
         std::cout << std::setfill(' ') << std::setw(83) <<
             "-----------------------------------------------------------------------------"
