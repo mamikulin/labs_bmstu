@@ -5,7 +5,7 @@
 using namespace std;
 int main(){
     
-    int count = -1, i = 0, j = 0;
+    int count = 0, i = 0, j = 0;
     char buff[128];
     char sym;
     
@@ -19,11 +19,14 @@ int main(){
 //        clues >> buff;
 //        count++;
 //    }
-    for (clues>>buff;!clues.eof();clues>>buff){count++;}
+    for (clues>>buff;!clues.eof();clues>>buff){
+//        cout<<count<<" ";
+        count++;}
     
-    int *keys = new int[count];
+    int *keys = new int[count+1];
     clues.clear();
     clues.seekg(0);
+    
    
     
     while(clues >> std::noskipws >> sym){
