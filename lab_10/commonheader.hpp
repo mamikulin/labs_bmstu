@@ -19,6 +19,7 @@ void print(double** mat, int ij);
 void inverting(double** mat, int ij);
 void row_min(double **mat,int ij, int i, int ii, double kdel);
 void column_make_zero(double** mat, int ij, int ii);
+void replace(double** mat, int(ij), int i, int ii);
 
 #endif /* commonheader_hpp */
 

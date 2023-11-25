@@ -10,12 +10,13 @@
 int main(int argc, const char * argv[]) {
     int ij;
     std::cin >> ij;
-    double** mat = new double*[ij];
+    double** mat = new double*[ij+1];
     
     fillmat(mat, ij);
     print(mat, ij);
     inverting(mat, ij);
     print(mat, ij);
+
     
     
     return 1;

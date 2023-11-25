@@ -9,8 +9,13 @@
 
 void inverting(double** mat, int ij){
     for (int i = 0; i < ij; i++){
+        
         column_make_zero(mat, ij, i);
     }
+    print(mat, ij);
+    replace(mat, ij, 0, 3);
+    replace(mat, ij, 0, 1);
+    replace(mat, ij, 1, 2);
  
 }
 
@@ -21,24 +26,29 @@ void row_min(double **mat,int ij, int i, int jj, double kdel){
     
     for (int j = 0; j < ij * 2; j++){
         
-        mat[i][j] -= mat[jj][j] * kdel;
+        mat[i][j] -= mat[0][j] * kdel;
         
     }
 }
 void column_make_zero(double** mat, int ij, int jj){
-    double k = mat[jj][jj];
+    
+    
     bool ok = false;
     double kdel;
+
+    replace(mat, ij, jj, 0);
+    double k = mat[0][jj];
     
-    for (int i = 0; i < ij; i++){
+    for (int i =0; i < ij; i++){
         
         for(int j = 0; j < ij * 2; j ++){
             
-            if (i == jj){
-                mat[i][j] /= k;
+            if (i == 0){
+                mat[0][j] /= k;
                 ok = true;
-            }
-            else if (jj != ij-1 && ok == true){
+                
+                
+            } else if (jj != ij && ok == true){
                 while (mat[i][jj] != 0){
                     
                     
@@ -46,9 +56,26 @@ void column_make_zero(double** mat, int ij, int jj){
                     
                 }
             }
+            
+            
+            
         }
         
+        
     }
+    
+
+
+
+    
+}
+
+void replace(double** mat, int(ij),int i,int ii){
+    
+    mat[ij] = mat[i];
+    mat[i] = mat[ii];
+    mat[ii] = mat[ij];
+    
     
 }
 

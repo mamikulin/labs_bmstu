@@ -11,23 +11,13 @@ void fillmat(double** mat,int ij){
     
     srand ( time(NULL) );
     
-    for (int n = 0; n<ij; n++){
+    for (int n = 0; n<ij + 1; n++){
         mat[n] =new double[ij * 2];
     }
     
     for (int j = 0; j < ij * 2; j++){
         
-            for (int i = 0; i < ij; i++){
-                
-//                if (abs(j - i) == 1){
-//                    mat[i][j] = pow((j - i) * x, i+1) / pow(fact(j+1), i+1);
-//                }else if (i < j){
-//                    mat[i][j] = mat[i][j-1]  / pow(j+1, i+1);
-//                }else if (i > j){
-//                    mat[i][j] = mat[i-1][j]  * ((-x)/fact(j+1));
-//                }else{
-//                    mat[i][j] = 1;
-//                }
+            for (int i = 0; i < ij ; i++){
                 
                 if (j<ij){
                     mat[i][j] = 1 + std::rand() / ((RAND_MAX + 1u) / 9);
