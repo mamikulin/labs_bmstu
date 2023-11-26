@@ -9,7 +9,7 @@
 
 void fillmat(double** mat,int ij){
     
-    srand ( time(NULL) );
+//    srand ( time(NULL) );
     
     for (int n = 0; n<ij + 1; n++){
         mat[n] =new double[ij * 2];
@@ -19,9 +19,8 @@ void fillmat(double** mat,int ij){
         
             for (int i = 0; i < ij ; i++){
                 
-                if (j<ij){
-                    mat[i][j] = 1 + std::rand() / ((RAND_MAX + 1u) / 9);
-                }else if (j == i +ij){
+                
+                if (j == i +ij){
                     mat[i][j] = 1;
                 }else{
                     mat[i][j] = 0;

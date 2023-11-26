@@ -8,14 +8,16 @@
 
 
 void inverting(double** mat, int ij){
+    
     for (int i = 0; i < ij; i++){
         
         column_make_zero(mat, ij, i);
     }
-    print(mat, ij);
-    replace(mat, ij, 0, 3);
-    replace(mat, ij, 0, 1);
-    replace(mat, ij, 1, 2);
+    replace(mat, ij, 0, ij);
+    for (int i = 1; i < ij; i++){
+        replace(mat, ij, i, i-1);
+    }
+    replace(mat, ij, ij, ij-1);
  
 }
 
