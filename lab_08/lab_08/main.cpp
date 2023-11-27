@@ -12,7 +12,7 @@ int fact(int n);
 //template <typename T>
 void print(double **mat, int ij, char t, int p);
 void fillmat(double** mat,int ij,double x);
-void clear(double** mass);
+void clear(double** mass, int ij);
 void fillstaticmat(double B[10][10]);
 
 int main() {
@@ -28,7 +28,7 @@ int main() {
     
     fillmat(mat, ij, x);
     print(mat, ij, t, p);
-    clear(mat);
+    clear(mat, ij);
     
     
     
@@ -43,7 +43,7 @@ int main() {
     fillstaticmat(B);
     
     std::cout<<B<<"  ";
-    std::cin>>x;
+//    std::cin>>x;
     std::cout<<*B[8]<<"  "<<B[9]<<std::endl;
     std::cout<<B[0][5]<<"  "<<*(*B+4) <<"  "<<*B[8]<<std::endl;
     std::cout<<*(*(B+7))<<"  "<<*B[1]<<std::endl;
@@ -56,15 +56,16 @@ void fillstaticmat(double B[10][10]){
     double **mat = new double *[10];
     
     
-    
-    for (int i = 0; i < 10; i++){
-        
+    for (int i = 0; i < 10; i ++){
+        for (int j = 0; j < 10; j++){
+//            std::cout << i << " " << j << '\n';
+//            std::cout << B[i][j] << " " << mat[i][j]<< '\n';
+//            mat[i][j] = B[i][j];
             
-            mat[i] = B[i];
-    
+        }
     }
     print(mat, 10, 'a', 8);
-    clear(mat);
+    clear(mat, 10);
     
 }
 
@@ -129,6 +130,8 @@ void print(double **mat, int ij, char t, int p){
     std::cout << '\n';
 }
 
-void clear(double** mass){
-    delete[] mass;
+void clear(double** mass, int ij){
+    for (int i=0; i < ij; i++){
+        delete[] mass[i];
+    }
 }

@@ -45,7 +45,7 @@ int main(int argc, const char * argv[]) {
 
     delete[] ans;
     delete[] B;
-    for (int i; i < ij; i++){
+    for (int i = 0; i < ij; i++){
         delete[] mat[i];
     }
     return 1;

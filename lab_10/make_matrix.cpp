@@ -7,12 +7,13 @@
 
 #include "commonheader.hpp"
 
+
 void fillmat(double** mat,int ij){
     
 //    srand ( time(NULL) );
     
     for (int n = 0; n<ij + 1; n++){
-        mat[n] =new double[ij * 2];
+        mat[n] =new double[(ij * 2)+1];
     }
     
     for (int j = 0; j < ij * 2; j++){
@@ -46,6 +47,3 @@ void print(double **mat, int ij){
     std::cout << '\n';
     std::cout << '\n';
 }
-    
-
-

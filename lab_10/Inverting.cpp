@@ -35,10 +35,21 @@ void row_min(double **mat,int ij, int i, int jj, double kdel){
 void column_make_zero(double** mat, int ij, int jj){
     
     
-    bool ok = false;
+    int in = 1;
     double kdel;
-
+    
     replace(mat, ij, jj, 0);
+    
+    while (mat[0][jj] == 0){
+        
+        
+        replace(mat, ij, 0, in);
+        in++;
+        
+        
+        
+    }
+    
     double k = mat[0][jj];
     
     for (int i =0; i < ij; i++){
@@ -47,29 +58,17 @@ void column_make_zero(double** mat, int ij, int jj){
             
             if (i == 0){
                 mat[0][j] /= k;
-                ok = true;
                 
                 
-            } else if (jj != ij && ok == true){
+                
+            } else if (jj != ij){
                 while (mat[i][jj] != 0){
-                    
-                    
                     row_min(mat, ij, i, jj, kdel );
                     
                 }
             }
-            
-            
-            
         }
-        
-        
     }
-    
-
-
-
-    
 }
 
 void replace(double** mat, int(ij),int i,int ii){
