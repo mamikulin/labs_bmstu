@@ -19,7 +19,7 @@ int main() {
     char t;
     int ij, p;
     
-    double x = 0.2;
+    double x = 1;
     std::cout << "размер матрицы    научный(s)/фиксированной точкой(any key)   setprecision: ";
     std::cin >> ij >> t >> p;
     std::cout << '\n';
@@ -33,7 +33,7 @@ int main() {
     
     
     double B[10][10];
-    
+
     for (int i = 0; i < 10; i++){
         for (int j = 0; j < 10; j++){
             B[i][j] = 10 * (i+1) + (j+1);
@@ -41,7 +41,7 @@ int main() {
     }
 //    print(B, ij, t, p);
     fillstaticmat(B);
-    
+
     std::cout<<B<<"  ";
 //    std::cin>>x;
     std::cout<<*B[8]<<"  "<<B[9]<<std::endl;
@@ -49,7 +49,7 @@ int main() {
     std::cout<<*(*(B+7))<<"  "<<*B[1]<<std::endl;
     std::cout<<*(B[4]+1)<<"  " <<*(*B+1)<<std::endl;
     std::cout<<B[0][20]<<"  "<<*(*B+40)<<"  "<<*B[2]<<std::endl;
-    
+
    
 }
 void fillstaticmat(double B[10][10]){
@@ -58,14 +58,12 @@ void fillstaticmat(double B[10][10]){
     
     for (int i = 0; i < 10; i ++){
         for (int j = 0; j < 10; j++){
-//            std::cout << i << " " << j << '\n';
-//            std::cout << B[i][j] << " " << mat[i][j]<< '\n';
-//            mat[i][j] = B[i][j];
+            mat[i] = B[i];
             
         }
     }
     print(mat, 10, 'a', 8);
-    clear(mat, 10);
+   
     
 }
 
@@ -134,4 +132,5 @@ void clear(double** mass, int ij){
     for (int i=0; i < ij; i++){
         delete[] mass[i];
     }
+    delete[] mass;
 }

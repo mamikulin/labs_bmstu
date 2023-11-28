@@ -14,6 +14,8 @@
 #include <ctime>
 #include <iomanip>
 
+
+double det(double **mat, int ij);
 void fillmat(double** mat, int ij);
 void print(double** mat, int ij);
 void inverting(double** mat, int ij);

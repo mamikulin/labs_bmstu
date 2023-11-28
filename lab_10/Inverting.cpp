@@ -45,9 +45,6 @@ void column_make_zero(double** mat, int ij, int jj){
         
         replace(mat, ij, 0, in);
         in++;
-        
-        
-        
     }
     
     double k = mat[0][jj];

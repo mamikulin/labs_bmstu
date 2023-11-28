@@ -27,6 +27,12 @@ int main(int argc, const char * argv[]) {
     }
 
     print(mat, ij);
+    
+    std::cout << det(mat, ij) << '\n';
+    if (det(mat, ij) == 0){
+        std::cout << "Матрица вырожденная" << '\n';
+        return 1;
+    }
     inverting(mat, ij);
     print(mat, ij);
     
@@ -48,5 +54,6 @@ int main(int argc, const char * argv[]) {
     for (int i = 0; i < ij; i++){
         delete[] mat[i];
     }
+    delete[] mat;
     return 1;
 }
