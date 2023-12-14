@@ -69,11 +69,8 @@ void column_make_zero(double** mat, int ij, int jj){
 }
 
 void replace(double** mat, int(ij),int i,int ii){
-    
     mat[ij] = mat[i];
     mat[i] = mat[ii];
     mat[ii] = mat[ij];
-    
-    
 }
 

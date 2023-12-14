@@ -2,7 +2,7 @@
 
 int main(){
     I_print add;
-    PF funcs[] = {f1, f2, f3, f4};
+    PF  funcs[] = {f1, f2, f3, f4};
     PPF ffuncs[] = {ff1, ff2, ff3, ff4};
     char* funcs_char[] = {"f1", "f2", "f3", "f4"};
     int epses[] = {-2, -3, -4, -5, -6};

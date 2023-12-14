@@ -15,23 +15,23 @@ struct_return min_max_elem_sort(int* mass, int len){
     for (int i = 0; i < len-1; i ++){
         old = mass[i];
         int  min = 100;
-        for (int j = i; j < len; j++){
+        for (int j = i+1; j < len; j++){
             if (mass[j] < min){
                 min = mass[j];
                 min_j = j;
             }
             n ++;
         }
-        mass[i] = mass[min_j];
-        mass[min_j] = old;
+       
         if (min_j != i){
+            mass[i] = mass[min_j];
+            mass[min_j] = old;
             k++;
         }
     }
     
     min_max_elem_struct_return.changes = k;
     min_max_elem_struct_return.comper = n;
-    min_max_elem_struct_return.mass = mass;
     
     return min_max_elem_struct_return;
 }

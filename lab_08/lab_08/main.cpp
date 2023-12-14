@@ -28,9 +28,9 @@ int main() {
     
     fillmat(mat, ij, x);
     print(mat, ij, t, p);
+    print(mat, ij, 's', p);
+    
     clear(mat, ij);
-    
-    
     
     double B[10][10];
 
@@ -39,7 +39,6 @@ int main() {
             B[i][j] = 10 * (i+1) + (j+1);
         }
     }
-//    print(B, ij, t, p);
     fillstaticmat(B);
 
     std::cout<<B<<"  ";
@@ -62,8 +61,9 @@ void fillstaticmat(double B[10][10]){
             
         }
     }
-    print(mat, 10, 'a', 8);
-   
+    print(mat, 10, 'a', 0);
+    
+    delete[] mat;
     
 }
 
@@ -99,7 +99,7 @@ int fact(int n){
 }
 //template <typename T>
 void print(double **mat, int ij, char t, int p){
-    int nj = std::floor(80 / static_cast<double>(p + 15));
+    int nj = std::floor(80 / static_cast<double>(10 + p));
     
     for (int k = 0; k < std::ceil(static_cast<double>(ij) / nj); k++){
             for (int n = 0; n < ij; n++){
@@ -108,9 +108,9 @@ void print(double **mat, int ij, char t, int p){
                     if (k * nj + m < ij){
                         
                         if (t == 's'){
-                            std::cout << std::setw(20) <<std::scientific << mat[n][k * nj + m] ;
+                            std::cout <<  std::scientific  << std::setw(10+p) << std::setprecision(p)  << mat[n][k * nj + m] ;
                         }else{
-                            std::cout << std::setw(20) <<std::setprecision(p) << mat[n][k * nj + m] ;
+                            std::cout << std::setw(p+10) <<std::setprecision(p) << mat[n][k * nj + m] ;
                         }
                     }
                     

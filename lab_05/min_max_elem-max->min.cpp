@@ -20,16 +20,15 @@ struct_return min_max_elem_sort_from_max_to_min(int* mass, int len){
             }
             n ++;
         }
-        mass[i] = mass[max_j];
-        mass[max_j] = old;
         if (max_j != i){
+            mass[i] = mass[max_j];
+            mass[max_j] = old;
             k++;
         }
     }
     
     min_max_elem_struct_return.changes = k;
     min_max_elem_struct_return.comper = n;
-    min_max_elem_struct_return.mass = mass;
     
     return min_max_elem_struct_return;
 }

@@ -28,7 +28,6 @@ int main(int argc, const char * argv[]) {
 
     print(mat, ij);
     
-    std::cout << det(mat, ij) << '\n';
     if (det(mat, ij) == 0){
         std::cout << "Матрица вырожденная" << '\n';
         return 1;
