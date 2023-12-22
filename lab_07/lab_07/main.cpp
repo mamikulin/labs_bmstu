@@ -19,7 +19,7 @@ int main(){
         stat[i] = new int[256];
     }
     
-    std::cout << "зашифровать - 0; расшифоровать - 1: ";
+    std::cout << "зашифровать - 0; расшифровать - 1: ";
     std::cin >> mode;
 
     char* s =readfile("clues.txt");
@@ -29,6 +29,9 @@ int main(){
         s = readfile("tobeencrypted.txt");
         sr = encrypting(s, clues, stat);
         writetofile("encrypted.txt", sr);
+        sr = readfile("encrypted.txt");
+        char* ds = decoding(sr, clues);
+        writetofile("decoded.txt", ds);
         print_stat(stat);
     }else if (mode == 1){
         sr = readfile("encrypted.txt");
@@ -36,7 +39,7 @@ int main(){
         writetofile("decoded.txt", ds);
     }
     
-    return 1;
+    return 0;
 }
 
 int getlen(char* filename){
@@ -45,7 +48,8 @@ int getlen(char* filename){
     
     std::fstream file(filename);
     if (!file.is_open()){
-            exit(404);
+        std::cout << "файл не найден" << '\n';
+        exit(404);
     }
     for (file>>ch; !file.eof(); file>>std::noskipws>>ch){
         len++;
@@ -62,13 +66,9 @@ char* readfile(char* filename){
     int len = getlen(filename);
     std::fstream file(filename);
     if (!file.is_open()){
-            exit(404);
+        std::cout << "файл не найден" << '\n';
+        exit(404);
     }
-    
-    if (!file.is_open()){
-            exit(404);
-    }
-    
     
     
     

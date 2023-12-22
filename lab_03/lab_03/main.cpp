@@ -9,6 +9,7 @@ void tfirst();
 void tsecond();
 void tthird();
 void tfourth();
+double y(int n);
 
 int main(){
     int num;
@@ -36,11 +37,11 @@ int main(){
 
 void tfirst(){
     char yorn;
-    
+    int ans;
+    int m, n;
     do{
+        ans = 0;
         
-        int ans = 0;
-        int m, n;
         std::cout << "n: ";
         std::cin >> n;
         std::cout << "m: ";
@@ -84,26 +85,45 @@ void tsecond(){
 
 void tfourth(){
     char yorn;
+    int n;
+    double ans = 0;
     do{
-        int n;
+        
         std::cout<<"n: ";
         std::cin>>n;
-        double ans = 0;
-        for(int i = n; i >= 0; --i){
-            ans = sqrt(ans + 2 * i + 1);
-        }
+        
+        std::cout << "n = 3: " << y(3) << '\n';
+        std::cout << "n = 5: " << y(5) << '\n';
+        std::cout << "n = 10: " << y(10) << '\n';
+        
+        ans = y(n);
+        
         std::cout<< ans <<'\n';
+        
+        
         std::cout << "продолжить? y/n: ";
         std::cin >> yorn;
     } while( yorn == 'y');
 }
 
+double y(int n)
+{
+    double ans;
+    for(int i = n; i >= 0; --i){
+        ans = sqrt(ans + 2 * i + 1);
+    }
+    
+    return ans;
+}
+
 void tthird(){
+    double sx, eps, mmcpp;
+    int n;
     for (double x = 0; x <= 1; x+=0.2){
-        int n = 1;
-        double eps = std::pow(10, -6);
-        double sx = 0;
-        double mmcpp = atan(x) * std::pow(x, 2);
+        n = 1;
+        eps = std::pow(10, -6);
+        sx = 0;
+        mmcpp = atan(x) * std::pow(x, 2);
         
         double x1 = std::pow(x, 3);
         do{
@@ -116,8 +136,8 @@ void tthird(){
         }while (abs(x1) > eps);
         
         std::cout<< "x: "<< std::setw(11)<<x<<std::endl;
-        std::cout<< "Y(x): " << mmcpp << std::endl;
-        std::cout << "S(x): " << sx << std::endl;
+        std::cout<< "Y(x): " << std::setw(3) << mmcpp << std::endl;
+        std::cout << "S(x): " << std::setw(3)<< sx << std::endl;
         std::cout << "n: "<< std::setw(11)<<n << std::endl;
         std::cout << "" << std::endl;
     }
