@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  test
+//  lab_01
 //
 //  Created by Mike Mikulin on 22.01.2024.
 //
