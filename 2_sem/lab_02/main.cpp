@@ -54,6 +54,7 @@ std::istream& operator>>(std::istream& in, Planet elm){
 
     return in;
 }
+
 void read_db(char* db_name, Planet* mass, int& amount){
     std::fstream db(db_name);
     if (!db.is_open()){
@@ -129,7 +130,6 @@ void read_db(char* db_name, Planet* mass, int& amount){
     // clear(satellites, c);
     delete[] lives;
 }
-
 void print_db(Planet* mass, int& amount){
     std::cout << '\n' << std::setw(4) <<  "id" << std::setw(24) << "Название" << std::setw(20) << "Диаметр" << std::setw(12) << "Жизнь" << std::setw(20) << "Спутники" << '\n'<< '\n';
     
