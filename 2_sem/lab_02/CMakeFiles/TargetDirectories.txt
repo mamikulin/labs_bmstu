@@ -1,0 +1,3 @@
+/Users/mikemikulin/desktop/labs/2_sem/lab_02/CMakeFiles/lab_2.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_02/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_02/CMakeFiles/rebuild_cache.dir
