@@ -3,6 +3,9 @@
 2_sem/lab_02_x/
 2_sem/mishaslib/
 2_sem/templates/
+2_sem/lab_02/
+2_sem/templates/
+2_sem/lab_03/
 
 *.xcodeproj
 *.DS_store

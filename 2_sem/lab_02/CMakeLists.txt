@@ -1,14 +1,31 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.23)
 
-project(lab_2 VERSION 1.0.0)
+set(project "lab_02")
+project(${project})
 
-add_executable(lab_2 main.cpp)
+set(CMAKE_CXX_STANDARD 17)
 
-# configure_file(${CMAKE_CURRENT_SOURCE_DIR}/data.txt
-#     ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+set(${project}_SOURCES
+        main.cpp)
 
-add_custom_command(
-    TARGET lab_2 POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy
-            ${CMAKE_SOURCE_DIR}/data.txt
-            ${CMAKE_CURRENT_BINARY_DIR}/data.txt)
+add_subdirectory(planet)
+add_subdirectory(team)
+
+set(${project}_SOURCE_LIST
+        ${${project}_SOURCES})
+
+add_executable(${project}
+        ${${project}_SOURCE_LIST})
+
+
+target_link_libraries(${project} planet)
+target_link_libraries(${project} team)
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/data.txt
+    ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+
+# add_custom_command(
+#         TARGET lab_02 POST_BUILD
+#         COMMAND ${CMAKE_COMMAND} -E copy
+#             ${CMAKE_SOURCE_DIR}/data.txt
+#             ${CMAKE_CURRENT_BINARY_DIR}/data.txt)
