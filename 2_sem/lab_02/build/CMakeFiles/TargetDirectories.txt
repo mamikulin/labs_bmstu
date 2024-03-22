@@ -1,0 +1,9 @@
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/CMakeFiles/lab_02.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/CMakeFiles/rebuild_cache.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/planet/CMakeFiles/planet.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/planet/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/planet/CMakeFiles/rebuild_cache.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/team/CMakeFiles/team.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/team/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_02/build/team/CMakeFiles/rebuild_cache.dir

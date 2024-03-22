@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/lab_02.dir/main.cpp.o -o lab_02  planet/libplanet.a team/libteam.a 

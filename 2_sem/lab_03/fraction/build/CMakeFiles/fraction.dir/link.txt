@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libfraction.a CMakeFiles/fraction.dir/fraction.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libfraction.a

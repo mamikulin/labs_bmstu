@@ -1,0 +1,3 @@
+/Users/mikemikulin/desktop/labs/2_sem/lab_03/fraction/build/CMakeFiles/fraction.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_03/fraction/build/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_03/fraction/build/CMakeFiles/rebuild_cache.dir
