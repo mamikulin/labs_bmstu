@@ -1,4 +1,4 @@
-# Install script for directory: /Users/mikemikulin/desktop/labs/2_sem/lab_03/fraction
+# Install script for directory: /Users/mikemikulin/Desktop/labs/2_sem/lab_03/fraction
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 

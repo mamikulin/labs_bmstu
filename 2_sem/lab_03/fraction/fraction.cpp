@@ -1,6 +1,7 @@
 #include "fraction.h"
 
 int fraction::nod(int a, int b) {
+    
     if (a == b){
         return a;
     }
@@ -11,15 +12,17 @@ int fraction::nod(int a, int b) {
 }
 
 void fraction::priv(){
-    int d = nod(numerator_, denominator_);
-    numerator_ /= d;
-    denominator_ /= d;
+    if (denominator_ != 1){
+        int d = nod(abs(numerator_), abs(denominator_));
+        numerator_ /= d;
+        denominator_ /= d;
+    }
 }
 
 std::istream& operator>>(std::istream& in, fraction &f){
     char input[50];
     in.getline(input, 50);
-    
+    int znak = 1; 
     int c = 0; 
     int space = -1, line = -1;
 
@@ -30,6 +33,9 @@ std::istream& operator>>(std::istream& in, fraction &f){
             space = c; 
         }else if(input[c] == '/'){
             line = c;
+        }
+        if( input[c] == '-'){
+            znak = -1;
         }
         c++;
     }
@@ -48,7 +54,7 @@ std::istream& operator>>(std::istream& in, fraction &f){
         denominator[i - (line + 1) + 1] = '\0';
     }
 
-   
+
 
     if (line == -1){
         f.set_numerator(atoi(denominator));
@@ -56,26 +62,37 @@ std::istream& operator>>(std::istream& in, fraction &f){
 
         return in;
     }if (atoi(denominator) != 0){
-        f.set_numerator(atoi(main_p) * atoi(denominator) + atoi(numerator));
+        f.set_numerator(abs(atoi(main_p)) * atoi(denominator) + abs(atoi(numerator)));
+        
+        f.set_numerator(f.get_numerator() * znak);
+        
         f.set_denominator(atoi(denominator));
 
         return in;
     }
     
     std::cout << "Error denominator = 0" << '\n';
-    f.set_numerator(-1);
-    f.set_denominator(-1);
+
     return in; 
 }
 
 std::ostream& operator<<(std::ostream& out, fraction &f){
     f.priv();
-    std::cout << f.get_numerator() << ' ' << f.get_denominator() << '\n';
+    if( f.get_numerator() / f.get_denominator() != 0 ){
+        if(f.get_numerator() % f.get_denominator() != 0){
+            std::cout << f.get_numerator() / f.get_denominator() << ' ' << abs(f.get_numerator()) % f.get_denominator() << '/' << f.get_denominator() << '\n';
+        }else{
+            std::cout << f.get_numerator() / f.get_denominator()<< '\n';
+        }
+    }else{
+        std::cout << f.get_numerator() << '/' << f.get_denominator() << '\n';
+    }
     return out;
 }
 
 fraction::fraction(const char* input_ptr){
     char input[50];
+    int znak = 1; 
     strcpy(input, input_ptr);
     int c = 0; 
     int space = -1, line = -1;
@@ -88,6 +105,10 @@ fraction::fraction(const char* input_ptr){
         }else if(input[c] == '/'){
             line = c;
         }
+        if( input[c] == '-'){
+            znak = -1;
+        }
+        
         c++;
     }
     
@@ -109,28 +130,27 @@ fraction::fraction(const char* input_ptr){
         this -> set_numerator(atoi(denominator));
         this -> set_denominator(1);
 
-        return ;
+        return;
     }if (atoi(denominator) != 0){
-        this -> set_numerator(atoi(main_p) * atoi(denominator) + atoi(numerator));
+        this -> set_numerator(abs(atoi(main_p)) * atoi(denominator) + abs(atoi(numerator)));
+        this -> set_numerator(this -> get_numerator() * znak);
         this -> set_denominator(atoi(denominator));
-    
-        std::cout<< numerator_<< ' ' << denominator_ << '\n';
-        
-        return ;
+
+        return;
     }
     
     std::cout << "Error denominator = 0" << '\n';
-    this -> set_numerator(-1);
-    this -> set_denominator(-1);
+
     return ; 
 
 
 }
 
-fraction::fraction(const int numerator,const int denominator){
+fraction::fraction( int numerator, int denominator)
+{
     this -> set_numerator(numerator);
     this -> set_denominator(denominator);
-    priv();
+    
 }
 
 fraction::fraction(const double znach){
@@ -140,13 +160,13 @@ fraction::fraction(const double znach){
     int eps = pow(10, 6);
     this -> set_numerator(mp * eps + sp * eps); 
     this -> set_denominator(eps);
-    priv();
 }
 
-fraction::fraction(const int znach){
-    this -> set_numerator(znach);
-    this -> set_denominator(1);
-}
+//fraction::fraction( int znach){
+ //   std::cout<<" int const"<<znach<<'\n';
+  //  this -> set_numerator(znach);
+   // this -> set_denominator(1);
+//}
 
 
 
@@ -168,7 +188,7 @@ void fraction::set_denominator(int denominator){
 }
 
 fraction operator+(const fraction& a, const fraction& b){
-    
+   
     int numerator = (a.numerator_ * b.denominator_) + (a.denominator_ * b.numerator_);
     int denominator =  a.denominator_ * b.denominator_;
 
@@ -185,23 +205,22 @@ fraction operator+(const fraction& a, const double& b){
     return a + elm_f;
 }
 
-fraction fraction::operator+(fraction& elm){
-    
-    int numerator = (this -> numerator_ * elm.get_denominator()) + (this -> denominator_ * elm.get_numerator());
-    int denominator =  this -> denominator_ * elm.get_denominator();
-
-    return fraction(numerator ,denominator);
-}
+// fraction fraction::operator+(fraction& elm){
+//     std::cout << "first" << '\n';
+//     int numerator = (this -> numerator_ * elm.get_denominator()) + (this -> denominator_ * elm.get_numerator());
+//     int denominator =  this -> denominator_ * elm.get_denominator();
+//     return fraction(numerator ,denominator);
+// }
 
 fraction fraction::operator+(int& elm){
     fraction elm_f(elm);
     return *this + elm_f;
 }
 
-fraction fraction::operator+(double& elm){
-    fraction elm_f(elm);
-    return *this + elm_f;
-}
+// fraction fraction::operator+(double& elm){
+//     fraction elm_f(elm);
+//     return *this + elm_f;
+// }
 
 
 

@@ -17,12 +17,12 @@ class fraction{
         friend std::ostream& operator<<(std::ostream&, fraction&);
 
     public:
-        fraction(const int,const int);
+        fraction( int a, int b = 1);
         fraction(){
             numerator_ = 0; 
-            denominator_ = 0;
+            denominator_ = 1;
         };
-        fraction(const int);
+       // fraction( int);
         fraction(const double);
         fraction(const char*);
 
@@ -40,8 +40,8 @@ class fraction{
         friend fraction operator+(const double& a, const fraction& b);
         friend fraction operator+(const fraction& a, const double& b);
 
-        fraction operator+(double&);
-        fraction operator+(fraction& );
+        //fraction operator+(double&);
+       // fraction operator+(const fraction& );
         fraction operator+(int&);
 
         // fraction& fraction::operator+=(const fraction& elm);
@@ -49,6 +49,7 @@ class fraction{
         // fraction& fraction::operator+=(const double& elm);
         fraction& operator+=(const fraction& elm){
             fraction summ = *this + elm;
+          
             *this = summ; 
             return *this;
         }

@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mikemikulin/desktop/labs/2_sem/lab_03
+CMAKE_SOURCE_DIR = /Users/mikemikulin/Desktop/labs/2_sem/lab_03
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mikemikulin/desktop/labs/2_sem/lab_03/build
+CMAKE_BINARY_DIR = /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mikemikulin/desktop/labs/2_sem/lab_03/build/CMakeFiles /Users/mikemikulin/desktop/labs/2_sem/lab_03/build/fraction//CMakeFiles/progress.marks
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mikemikulin/desktop/labs/2_sem/lab_03/build/CMakeFiles 0
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build/CMakeFiles /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build/fraction//CMakeFiles/progress.marks
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/clean
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/preinstall
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/preinstall
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 fraction/CMakeFiles/fraction.dir/rule:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/CMakeFiles/fraction.dir/rule
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fraction/CMakeFiles/fraction.dir/rule
 .PHONY : fraction/CMakeFiles/fraction.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ fraction: fraction/CMakeFiles/fraction.dir/rule
 
 # fast build rule for target.
 fraction/fast:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/build
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/build
 .PHONY : fraction/fast
 
 fraction.o: fraction.cpp.o
@@ -135,7 +135,7 @@ fraction.o: fraction.cpp.o
 
 # target to build an object file
 fraction.cpp.o:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/fraction.cpp.o
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/fraction.cpp.o
 .PHONY : fraction.cpp.o
 
 fraction.i: fraction.cpp.i
@@ -143,7 +143,7 @@ fraction.i: fraction.cpp.i
 
 # target to preprocess a source file
 fraction.cpp.i:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/fraction.cpp.i
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/fraction.cpp.i
 .PHONY : fraction.cpp.i
 
 fraction.s: fraction.cpp.s
@@ -151,7 +151,7 @@ fraction.s: fraction.cpp.s
 
 # target to generate assembly for a file
 fraction.cpp.s:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/fraction.cpp.s
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(MAKE) $(MAKESILENT) -f fraction/CMakeFiles/fraction.dir/build.make fraction/CMakeFiles/fraction.dir/fraction.cpp.s
 .PHONY : fraction.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/mikemikulin/desktop/labs/2_sem/lab_03/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_03/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

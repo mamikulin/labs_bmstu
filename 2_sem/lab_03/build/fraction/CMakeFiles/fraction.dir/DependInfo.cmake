@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mikemikulin/desktop/labs/2_sem/lab_03/fraction/fraction.cpp" "fraction/CMakeFiles/fraction.dir/fraction.cpp.o" "gcc" "fraction/CMakeFiles/fraction.dir/fraction.cpp.o.d"
+  "/Users/mikemikulin/Desktop/labs/2_sem/lab_03/fraction/fraction.cpp" "fraction/CMakeFiles/fraction.dir/fraction.cpp.o" "gcc" "fraction/CMakeFiles/fraction.dir/fraction.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
