@@ -92,6 +92,7 @@ lab_04_EXTERNAL_OBJECTS =
 
 lab_04: CMakeFiles/lab_04.dir/main.cpp.o
 lab_04: CMakeFiles/lab_04.dir/build.make
+lab_04: MyStack/libMyStack.a
 lab_04: CMakeFiles/lab_04.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mikemikulin/desktop/labs/2_sem/lab_04/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab_04"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab_04.dir/link.txt --verbose=$(VERBOSE)

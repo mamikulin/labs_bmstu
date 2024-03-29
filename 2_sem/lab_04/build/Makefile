@@ -129,6 +129,19 @@ lab_04/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_04.dir/build.make CMakeFiles/lab_04.dir/build
 .PHONY : lab_04/fast
 
+#=============================================================================
+# Target rules for targets named MyStack
+
+# Build rule for target.
+MyStack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyStack
+.PHONY : MyStack
+
+# fast build rule for target.
+MyStack/fast:
+	$(MAKE) $(MAKESILENT) -f MyStack/CMakeFiles/MyStack.dir/build.make MyStack/CMakeFiles/MyStack.dir/build
+.PHONY : MyStack/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -161,6 +174,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... MyStack"
 	@echo "... lab_04"
 	@echo "... main.o"
 	@echo "... main.i"
