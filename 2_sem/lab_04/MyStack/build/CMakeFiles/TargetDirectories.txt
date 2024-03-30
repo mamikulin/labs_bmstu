@@ -1,0 +1,3 @@
+/Users/mikemikulin/Desktop/labs/2_sem/lab_04/MyStack/build/CMakeFiles/MyStack.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_04/MyStack/build/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/Desktop/labs/2_sem/lab_04/MyStack/build/CMakeFiles/rebuild_cache.dir
