@@ -5,6 +5,8 @@ project(${project})
 
 set(CMAKE_CXX_STANDARD 17)
 
+
+
 set(${project}_SOURCES
         myset.cpp myvector.cpp)
 

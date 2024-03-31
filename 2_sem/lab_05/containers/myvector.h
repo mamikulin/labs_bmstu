@@ -3,28 +3,64 @@
 
 #include <iostream>
 
-const int MAX_SIZE = 5;
 
+
+const int MAX_SIZE = 4;
+
+
+
+template<class INF>
 class MyVector {
  protected:
   int max_size;
   int size;
-  char **pdata;
-  void resize();
-
+  INF* pdata;
+  void resize(); //done
+  
  public:
-  MyVector(char *el = NULL, int max_size = MAX_SIZE);
-  MyVector(MyVector &v);
-  ~MyVector();
-  void add_element(char *el);
-  bool delete_element(int i);
-  char *operator[](int i);
-  void sort();
-  int get_size() { return size; }
-  int get_max_size() { return max_size; }
-  int find(char *el);
-  MyVector &operator=(MyVector &v);
-  friend std::ostream &operator<<(std::ostream &out, MyVector &v);
+ 
+  
+  
+  MyVector(INF el = NULL, int max_size_g = MAX_SIZE){
+    max_size = max_size_g;
+    pdata = new INF[MAX_SIZE];
+    size = 0;
+  }
+  
+  MyVector(MyVector &v){//done
+    pdata = new INF[MAX_SIZE];
+    size = 0;
+    *this = v; 
+
+  }
+  ~MyVector(){ //done
+    delete[] pdata;
+  }
+  void add_element(INF el); //done
+  bool delete_element(int i); //done
+  INF operator[](int i); //done
+  void sort(); //done
+  int get_size() { return size; } //done
+  int get_max_size() { return max_size; } //done
+  int find(INF el); //done
+  MyVector &operator=(MyVector &v){ //done
+    for(int i = 0; i < v.size; i++){  
+      add_element(v.pdata[i]);
+    }
+    return v; 
+  }
+  friend std::ostream &operator<< (std::ostream& out, MyVector<INF>& v){
+    std::cout << "{";
+    for (int i = 0; i < v.size; i++){
+        std::cout << v.pdata[i];
+        if (i != v.size - 1){
+            std::cout << ", ";
+        }
+    }
+    std::cout << "}\n";
+
+    return out;
+}
 };
 
 #endif  // INHERITANCE_MYVECTOR_H
