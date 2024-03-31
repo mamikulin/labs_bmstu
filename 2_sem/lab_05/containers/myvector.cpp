@@ -12,9 +12,11 @@ void MyVector<INF>::resize(){
         pdata = pdata_n;
         
         max_size *= 2;
-    }else if(size == max_size/4){
+    }
+    else if(size == max_size/4){
         INF* pdata_n = new INF[max_size/2];
         for (int i = 0; i < max_size/4; i++){
+            // std::cout <<  pdata[i] << '\n';
             pdata_n[i] = pdata[i];
         }
         pdata = pdata_n;
@@ -57,8 +59,8 @@ void MyVector<INF>::add_element(INF el){
 template<class INF>
 bool MyVector<INF>::delete_element(int i){
     if (i < size){
-        for(i++; i < size; i++){
-            pdata[i-1] = pdata[i];
+        for(int j = i + 1; j < size; j++){
+            pdata[j - 1] = pdata[j];
         }
         size--; 
         resize();
@@ -75,14 +77,13 @@ INF MyVector<INF>::operator[](int i){
 
 template<class INF>
 int MyVector<INF>::find(INF el){
-    int top = size, bottom = 0, len = size, mid;
+    int top = size, bottom = 0, len = size, mid, test;
     
     while(top - bottom > -1){
         mid = (top + bottom) / 2;
         if (el == pdata[mid]){
             return mid;
-        }else  if (len == 1){
-            std::cout << "not found" << '\n';
+        }else  if (len <= 1){
             return -1;
         }else if(el < pdata[mid]){
             top =  mid;

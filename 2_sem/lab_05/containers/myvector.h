@@ -5,9 +5,7 @@
 
 
 
-const int MAX_SIZE = 4;
-
-
+const int MAX_SIZE = 5;
 
 template<class INF>
 class MyVector {
@@ -44,6 +42,9 @@ class MyVector {
   int get_max_size() { return max_size; } //done
   int find(INF el); //done
   MyVector &operator=(MyVector &v){ //done
+    for (int i = this -> size; i >= 1; i--){
+      delete_element(0);
+    }
     for(int i = 0; i < v.size; i++){  
       add_element(v.pdata[i]);
     }

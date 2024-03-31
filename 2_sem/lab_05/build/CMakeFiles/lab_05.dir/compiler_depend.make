@@ -825,6 +825,7 @@ CMakeFiles/lab_05.dir/main.cpp.o: /Users/mikemikulin/Desktop/labs/2_sem/lab_05/m
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.cpp \
   /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.h \
   /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myvector.cpp \
   /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myvector.h \
@@ -1404,6 +1405,8 @@ CMakeFiles/lab_05.dir/main.cpp.o: /Users/mikemikulin/Desktop/labs/2_sem/lab_05/m
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__mutex/tag_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/predicate_traits.h:
+
+/Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__mutex/mutex.h:
 
