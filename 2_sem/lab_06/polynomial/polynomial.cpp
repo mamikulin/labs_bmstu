@@ -75,29 +75,15 @@ int f = 0;
 std::ostream& operator<<(std::ostream& out, Term &a){
     
     if (a.coefficient != 1 && a.coefficient != 0){
-        if(a.coefficient > 0){
-            if (f){
-                
-                std::cout << "+ ";
-                
-            }
-            f++;
-            if(a.power != 1 && a.power != 0){
-                std::cout << a.coefficient << "x^" << a.power ;
-            }else if(a.power == 1){
-                std::cout << a.coefficient << "x";
-            }else{
-                std::cout << a.coefficient;
-            }
+        
+        if(a.power != 1 && a.power != 0){
+            std::cout << abs(a.coefficient) << "x^" << a.power ;
+        }else if(a.power == 1){
+            std::cout <<  abs(a.coefficient) << "x";
         }else{
-            if(a.power != 1 && a.power != 0){
-                std::cout << a.coefficient << "x^" << a.power ;
-            }else if(a.power == 1){
-                std::cout << a.coefficient << "x";
-            }else{
-                std::cout << a.coefficient;
-            }
+            std::cout <<  abs(a.coefficient);
         }
+        
     }else if(a.coefficient == 1){
         if(a.power != 1 && a.power != 0){
             std::cout << "x^" << a.power;
@@ -124,17 +110,22 @@ std::ostream& operator<<(std::ostream& out, Polynomial& a){
     
     for(int i = 0; i < a.degree; i++){
         if (a.poly[i].get_coefficient() != 0){
-            std::cout << a.poly[i] << " ";
+            
+            if  (a.poly[i].get_coefficient() > 0 && i != 0){
+                std::cout << "+ " <<  a.poly[i] << " ";
+            }else if(i == 0){
+                std::cout <<  a.poly[i] << " ";
+            }else{
+                std::cout << "- " << a.poly[i] << " ";
+            }
         }
     }
-
-    f = 0;
 
 
     return out;
 
 }
-
+// 3x^2 - x^2 -    3x^2 + x ^2 + 5x^5   + 4x^3 +x^2 - 7
 std::istream& operator>>(std::istream& in, Polynomial& a){
     
     char input[128];
