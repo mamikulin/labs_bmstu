@@ -6,7 +6,7 @@ int main() {
    
     std::cout << a.get_size() << '\n';
     std::cout << a.get_max_size() << '\n';
-
+    std::cout << typeid(a).name()<< '\n';
     a.add_Element(1);
     a.add_Element(4);
     a.add_Element(6);
@@ -22,8 +22,13 @@ int main() {
     std::cout << a<< '\n';
     std::cout << b<< '\n';
     a -= b;
-    a = b;
-    bool k = a == b;
+    std::cout << a << '\n';
+    std::cout <<"a:   " <<  typeid(a).name()<< '\n';
+    std::cout <<"c:   " <<  typeid(c).name()<< '\n';
+    std::cout <<"b:   " << typeid(b).name()<< '\n';
+    std::cout <<"a+b: " <<  typeid((a + b)).name()<< '\n';
+    // c = a + b;
+    bool k = c == b;
     std::cout << k << '\n';
     // std::cout << c << '\n';
     

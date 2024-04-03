@@ -13,7 +13,7 @@ class MyVector {
   int max_size;
   int size;
   INF* pdata;
-  void resize(); //done
+  void resize();  
   
  public:
  
@@ -25,31 +25,32 @@ class MyVector {
     size = 0;
   }
   
-  MyVector(MyVector &v){//done
+  MyVector(MyVector &v){ 
     pdata = new INF[MAX_SIZE];
     size = 0;
     *this = v; 
 
   }
-  ~MyVector(){ //done
+  ~MyVector(){  
     delete[] pdata;
   }
-  void add_element(INF el); //done
-  bool delete_element(int i); //done
-  INF operator[](int i); //done
-  void sort(); //done
-  int get_size() { return size; } //done
-  int get_max_size() { return max_size; } //done
-  int find(INF el); //done
-  MyVector &operator=(MyVector &v){ //done
+  void add_element(INF el);  
+  bool delete_element(int i);  
+  INF operator[](int i);  
+  void sort();  
+  int get_size() { return size; }  
+  int get_max_size() { return max_size; }  
+  int find(INF el);  
+  void operator=(MyVector &v){  
     for (int i = this -> size; i >= 1; i--){
-      delete_element(0);
+      this -> delete_element(0);
     }
     for(int i = 0; i < v.size; i++){  
-      add_element(v.pdata[i]);
+      this -> add_element(v.pdata[i]);
     }
-    return v; 
+    
   }
+  
   friend std::ostream &operator<< (std::ostream& out, MyVector<INF>& v){
     std::cout << "{";
     for (int i = 0; i < v.size; i++){
