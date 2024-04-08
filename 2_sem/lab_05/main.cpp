@@ -23,10 +23,6 @@ int main() {
     std::cout << b<< '\n';
     a -= b;
     std::cout << a << '\n';
-    std::cout <<"a:   " <<  typeid(a).name()<< '\n';
-    std::cout <<"c:   " <<  typeid(c).name()<< '\n';
-    std::cout <<"b:   " << typeid(b).name()<< '\n';
-    std::cout <<"a+b: " <<  typeid((a + b)).name()<< '\n';
     // c = a + b;
     bool k = c == b;
     std::cout << k << '\n';

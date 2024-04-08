@@ -1,7 +1,7 @@
 // Файл MyStack.h
 // Шаблонный класс MyStack на основе односвязного списка.
 
-
+#include <iostream>
 #ifndef MyStack_h                       // защита от повторной компиляции
 #define MyStack_h                       // модуль подключен
 
@@ -13,6 +13,10 @@ private:
     INF d;                              // информационная часть узла
     ListNode *next;                     // указатель на следующий узел списка
     ListNode(void) { next = nullptr; }  //конструктор
+    // ListNode(ListNode& a) { 
+    //     this -> next = a.next;
+    //     this -> d = a.d;
+    //  } 
     friend FRIEND;
 };
 
@@ -25,6 +29,34 @@ public:
     MyStack(void){
         top = nullptr;
     }           // конструктор
+    
+
+    MyStack& operator=(const MyStack& stack){
+        MyStack<INF> stack_r;
+        auto top_s = stack.top;
+        
+        while(!(this->empty())){
+            this -> pop();
+        }  
+        while(!(top_s == nullptr)){
+            stack_r.push(top_s->d);
+            top_s = top_s -> next;
+        }
+
+        while(!stack_r.empty()){
+            this -> push(stack_r.top_inf());
+            stack_r.pop();
+        }
+        return *this;
+    }
+
+    MyStack(const MyStack& stack){
+        top = nullptr;
+
+        *this = stack;
+        
+    }
+
     ~MyStack(void){
         while(!empty()){
             pop();
@@ -48,8 +80,11 @@ public:
     }        // добавить узел в вершину стека
 
     void pop(void){
+        
         if(!empty()){
+
             Node* del = top;
+            // std::cout << top << '\n';
             top = top -> next;
             delete del; 
         }else{
@@ -63,6 +98,8 @@ public:
             return top->d;
         }
     }       // считать информацию из вершины стека
+
+    
 
 };
 

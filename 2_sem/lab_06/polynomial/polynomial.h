@@ -46,18 +46,20 @@ class Polynomial{
 
         Term* poly;
         
-        int degree;
+        
         int order_;
 
         friend std::ostream& operator<<(std::ostream&, Polynomial&);
         friend std::istream& operator>>(std::istream&, Polynomial&);
 
     public: 
+        int degree;
         void shape();
         
         Polynomial(int degree = 0){
             this -> order_ = 1; // max -> min: 1; min -> max: -1
             this -> degree = degree;
+            this -> poly= new Term[1];
         }
         ~Polynomial(){
             delete[] poly;
@@ -69,13 +71,16 @@ class Polynomial{
         Polynomial(Polynomial &a){
             this->degree = a.degree;
             this -> poly = new Term[degree];
-            *this = a; 
+            for (int i = 0; i < a.degree; i++){
+                this -> poly[i] = a.poly[i];
+            }
 
         }
 
 
-        void operator=(const Polynomial& a){
+        Polynomial& operator=(const Polynomial& a){
             this->degree = a.degree;
+            delete[] this->poly;
             this -> poly = new Term[degree];
             for (int i = 0; i < this->degree; i++){
                 
@@ -83,6 +88,7 @@ class Polynomial{
                 
             }
             
+            return *this;
          }
 
         Polynomial& operator+=(const Polynomial& a){
@@ -92,6 +98,7 @@ class Polynomial{
         }
         Polynomial& operator*=(const Polynomial& a){
             Polynomial r = *this * a;
+            
             *this = r; 
             return *this;
         }

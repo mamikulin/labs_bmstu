@@ -825,10 +825,10 @@ CMakeFiles/lab_04.dir/main.cpp.o: /Users/mikemikulin/desktop/labs/2_sem/lab_04/m
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/mikemikulin/desktop/labs/2_sem/lab_04/header.h
+  /Users/mikemikulin/desktop/labs/2_sem/lab_04/MyStack/MyStack.h
 
 
-/Users/mikemikulin/desktop/labs/2_sem/lab_04/header.h:
+/Users/mikemikulin/desktop/labs/2_sem/lab_04/MyStack/MyStack.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h:
 
