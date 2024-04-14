@@ -109,12 +109,20 @@ std::istream& operator>>(std::istream& in, Term &a){
 
 std::ostream& operator<<(std::ostream& out, Polynomial& a){
     a.shape();
+    bool ok = false;
     for(int i = 0; i < a.degree; i++){
-        
+        // std::cout<<i<< ": ";
+        if (a.poly[i-1].get_coefficient() != 0 && i>0) {
+            ok = true;
+            // std::cout << i;
+        } 
         if (a.poly[i].get_coefficient() != 0){
             
-            if  (a.poly[i].get_coefficient() > 0 && i != 0){
+            if  (a.poly[i].get_coefficient() > 0 && ok){
                 std::cout << "+ " <<  a.poly[i] << " ";
+            }else if  (a.poly[i].get_coefficient() > 0 && !ok){
+                // std::cout << ok << '\n';
+                std::cout <<  a.poly[i] << " ";
             }else if(i == 0 && a.poly[i].get_coefficient() > 0 ){
                 std::cout <<  a.poly[i] << " ";
             }else{
@@ -241,9 +249,9 @@ Polynomial operator*(const Polynomial& a, const Polynomial& b){
 
     for(int i = 0; i < a.degree; i++){
         for(int j = 0; j < b.degree; j++){
-            // std::cout << i << " " << j << " " << a.poly[i].get_coefficient() << " " << b.poly[j].get_coefficient() << " "<< a.poly[i].get_power()+b.poly[j].get_power() << '\n';
-            poly[j + a.degree * i].set_coefficient(a.poly[i].get_coefficient()*b.poly[j].get_coefficient());
-            poly[j + a.degree * i].set_power(a.poly[i].get_power()+b.poly[j].get_power());
+            // std::cout << i << " " << j << " " << a.poly[i].get_coefficient() << " " << b.poly[j].get_coefficient() << " "<< a.poly[i].get_power()+b.poly[j].get_power() << " " << i + a.degree * j<< '\n';
+            poly[i + a.degree * j].set_coefficient(a.poly[i].get_coefficient()*b.poly[j].get_coefficient());
+            poly[i + a.degree * j].set_power(a.poly[i].get_power()+b.poly[j].get_power());
         }
         
     }

@@ -35,18 +35,7 @@ int main(){
 
     
     stack_a = stack_r;
-    std::cout << stack_a.top_inf() << '\n';
-    stack_a.pop();
-    stack_a.pop();
-    stack_a.pop();
-    std::cout << stack_a.top_inf() << '\n';
-    MyStack<int> stack_b(stack_r);
-    std::cout << stack_b.top_inf() << '\n';
-    stack_b.pop();
-    stack_b.pop();
-    stack_b.pop();
-    std::cout << stack_b.top_inf() << '\n';
-
+    MyStack<int> stack_b(stack_r); //проверка конструктора копирования
     std::cout << N << " =";
     while(!stack_r.empty()){
         std::cout << " " << stack_r.top_inf();
