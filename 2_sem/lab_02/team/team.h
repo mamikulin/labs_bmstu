@@ -14,54 +14,28 @@ class Worker{
         
         bool active_;
         
-        void set_name(char* name){
-            delete [] name_;
-            name_ = new char[16];
-            strcpy(name_, name);
-        }
-        void set_prof(char* prof){
-            delete [] prof_;
-            prof_ = new char[16];
-            strcpy(prof_, prof);
-        }
-        void set_zp(int zp){
-            zp_ = zp;
-        }
+        void set_name(char*);
+        void set_prof(char*);
+        void set_zp(int);
+        void set_id(int);
        
-        void set_active(bool active){
-            active_ = active;
-        }
+        void set_active(bool);
 
         
 
     public:
-        void give_id(){
-            id_ = total;
-            total++;
-        }
-        Worker() {
-            name_ = new char[1];
-            name_[0]='\0';
-            prof_ = new char[1];
-            prof_[0]='\0';
-            zp_= 0;
-            active_ = 0;
-        }
-
+       
+        void give_id();
+        Worker();
         Worker (Worker& obj);
-        Worker& operator= (Worker& obj){
-            this -> set_zp(obj.zp_);
-            this -> set_active(obj.active_);
-            this -> set_name(obj.name_);
-            this -> set_prof(obj.prof_);
-            return *this;
-        }
+        Worker& operator=(Worker& obj);
         ~Worker();
         void print();
         void set_all(char*, char*, int, bool, bool);
         char* get_name();
         char* get_prof();
         int get_zp();
+        int get_id();
         bool get_active();
 
         friend std::ostream& operator<<(std::ostream& out, Worker &elm);
@@ -69,8 +43,8 @@ class Worker{
 
 };
 
-
-void read_db(char* , Worker* , int& );
+void extend(Worker* old, int size, int newsize);
+void read_db(char* , Worker* , int& , int&);
 void print_db(Worker* , int& );
 void write_db(char* , Worker* , int& );
 void find(Worker*, int& );
@@ -80,4 +54,3 @@ void deletewo(Worker* , int& );
 void edit(Worker*, int& );
 int menu();
 
-void extend(Worker* old, int size, int newsize);

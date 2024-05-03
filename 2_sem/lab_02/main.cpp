@@ -5,19 +5,22 @@
 
 
 int main() {
-    int Size = 4;
+    int S = 2;
+    int& Size = S;
     int c = 0 ;
     int& amount = c;
     Worker* mass = new Worker[Size];
-    read_db("data.txt", mass, amount);
+    read_db("data.txt", mass, amount, Size);
+   
     while (true) {
-        if (amount == Size){
-            std::cout << Size << '\n';
-            extend(mass, Size, Size * 2);
-            Size = Size * 2;
-        }
+        
         switch (menu()) {
             case 1:
+                if (amount == Size){
+                    std::cout<< '\n' << Size << '\n';
+                    extend(mass, Size, Size * 2);
+                    Size = Size * 2;
+                }
                 createnew(mass, amount);
                 break;
             case 2:
@@ -35,6 +38,7 @@ int main() {
                 print_db(mass, amount);
                 break;
             case 7:
+                delete[] mass;
                 return 0;
             default:
                 std::cout << "Введен некорректный запрос\n";
@@ -42,30 +46,3 @@ int main() {
         }
     }
 }
-
-//
-//int main(){
-//    int c = 0, k;
-//    Planet* mass = new Planet[Size];
-//    int& amount = c;
-//    read_db("data.txt", mass, amount);
-//    mass[0].print();
-//    // print_db(mass, amount);
-//    // createnew(mass, amount);
-//    // print_db(mass, amount);
-//    // deletepl(mass, amount);
-//    // print_db(mass, amount);
-//    // edit(mass, amount);
-//    // sort_db(mass, amount);
-//    print_db(mass, amount);
-//    // find(mass, amount);
-//    // print_db(mass, amount);
-//    sort_db(mass, amount);
-//    print_db(mass, amount);
-//    // print_db(mass, amount);
-//    write_db("data.txt", mass, amount);
-//
-//    return 0;
-//    
-//}
-//

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers
+# Install script for directory: /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

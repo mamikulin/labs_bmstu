@@ -1,0 +1,9 @@
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/CMakeFiles/lab_01.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/CMakeFiles/rebuild_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/mymath/CMakeFiles/mymath.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/mymath/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/mymath/CMakeFiles/rebuild_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/mylib/CMakeFiles/mylib.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/mylib/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/build/mylib/CMakeFiles/rebuild_cache.dir

@@ -1,52 +1,67 @@
 #include "header.h"
-
+#include <string> 
 int main() {
+    setlocale(LC_ALL, "Russian");
+    Vector::MyVector<std::string> v("Hello!");
+    v.add_element("Привет!");
+    v.add_element("Привет!");
+    v.add_element("Привет!");
+    v.add_element("Привет!");
+    v.add_element("Привет!");
+    std::cout << v[0] << '\n';
+    std::cout << "Вектор v: " << v << std::endl;
+    v.add_element("Привет!");
+    v.add_element("Привет!");
+    v.add_element("Привет!");
+    std::cout << "Вектор v: " << v << std::endl;
     
-    MySet<int> a, b, c;
-   
-    std::cout << a.get_size() << '\n';
-    std::cout << a.get_max_size() << '\n';
-    std::cout << typeid(a).name()<< '\n';
-    a.add_Element(1);
-    a.add_Element(4);
-    a.add_Element(6);
-    a.add_Element(5);
-    a.add_Element(5);
-    a.add_Element(5);
-
-    b.add_Element(1);
-    b.add_Element(2);
-    b.add_Element(3);
-    b.add_Element(4);
-
-    std::cout << a<< '\n';
-    std::cout << b<< '\n';
-    a -= b;
-    std::cout << a << '\n';
-    // c = a + b;
-    bool k = c == b;
-    std::cout << k << '\n';
-    // std::cout << c << '\n';
+    Vector::MyVector<std::string> v1 = v;
     
-    
-    // std::cout << a << '\n';
-    // a.delete_Element(2);
-    // a.delete_Element(3);
-    // a.delete_Element(2);
-    // a.delete_Element(3);
-    // a.delete_Element(2);
-    // a.delete_Element(2);
-
-
-    // std::cout << a << '\n';
-    // b = a;
-    // std::cout << b << '\n';
-
-    // std::cout << a[3] << '\n';
-    // std::cout << a.find(59) << '\n';
-
-    // std::cout << a.get_size() << '\n';
-    // std::cout << a.get_max_size() << '\n';
-   
+    std::cout << "Вектор v1: " << v1 << std::endl;
+    for (int i = 0; i < MAX_SIZE; i++)
+        v1.delete_element(0);
+    std::cout << "Вектор v1: " << v1 << std::endl;
+    MySet<std::string> s("Yes"), s1, s2;
+    s.add_element("Привет!");
+    s.add_element("No");
+    std::string str = "Hello!";
+    s.add_element(str);
+    std::cout << "Множество s: " << s << std::endl;
+    s1.add_element("Cat");
+    s1.add_element("No");
+    s1.add_element("Привет!");
+    std::cout << "Множество s1: " << s1 << std::endl;
+    s2 = s1 - s;
+    std::cout << "Множество s2=s1-s: " << s2 << std::endl;
+    std::cout << "Множество s1: " << s1 << std::endl;
+    std::cout << "Множество s: " << s << std::endl;
+    s2 = s - s1;
+    std::cout << "Множество s2=s-s1: " << s2 << std::endl;
+    std::cout << "Множество s1: " << s1 << std::endl;
+    std::cout << "Множество s: " << s << std::endl;
+    s2 = s1 + s;
+    std::cout << "Множество s2=s1+s: " << s2 << std::endl;
+    std::cout << "Множество s1: " << s1 << std::endl;
+    std::cout << "Множество s: " << s << std::endl;
+    s2 = s1 * s;
+    std::cout << "Множество s2=s1*s: " << s2 << std::endl;
+    std::cout << "Множество s1: " << s1 << std::endl;
+    std::cout << "Множество s: " << s << std::endl;
+    MySet<std::string> s3 = s2;
+    std::cout << s3 << " " << s2 << '\n';
+    std::cout << "Множество s3=s2: " << s3 << std::endl;
+    if (s3 == s2)
+        std::cout << "Множество s3=s2\n";
+    else
+        std::cout << "Множество s3!=s2\n";
+    if (s3 == s1)
+        std::cout << "Множество s3=s1\n";
+    else
+        std::cout << "Множество s3!=s1\n";
+    if (s1 == s3)
+        std::cout << "Множество s1=s3\n";
+    else
+        std::cout << "Множество s1!=s3\n";
     return 0;
 }
+

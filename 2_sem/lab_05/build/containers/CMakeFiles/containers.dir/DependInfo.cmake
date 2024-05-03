@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.cpp" "containers/CMakeFiles/containers.dir/myset.cpp.o" "gcc" "containers/CMakeFiles/containers.dir/myset.cpp.o.d"
-  "/Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myvector.cpp" "containers/CMakeFiles/containers.dir/myvector.cpp.o" "gcc" "containers/CMakeFiles/containers.dir/myvector.cpp.o.d"
+  "/Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myset.cpp" "containers/CMakeFiles/containers.dir/myset.cpp.o" "gcc" "containers/CMakeFiles/containers.dir/myset.cpp.o.d"
+  "/Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myvector.cpp" "containers/CMakeFiles/containers.dir/myvector.cpp.o" "gcc" "containers/CMakeFiles/containers.dir/myvector.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

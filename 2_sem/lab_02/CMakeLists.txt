@@ -24,8 +24,3 @@ target_link_libraries(${project} team)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/data.txt
     ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
 
-# add_custom_command(
-#         TARGET lab_02 POST_BUILD
-#         COMMAND ${CMAKE_COMMAND} -E copy
-#             ${CMAKE_SOURCE_DIR}/data.txt
-#             ${CMAKE_CURRENT_BINARY_DIR}/data.txt)

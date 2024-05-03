@@ -89,7 +89,7 @@ std::ostream& operator<<(std::ostream& out, Term &a){
         }else if(a.power == 1){
             std::cout << "x ";
         }else{
-            std::cout << a.coefficient;
+            std::cout << abs(a.coefficient);
         }
     }
 

@@ -1,6 +1,6 @@
-/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/CMakeFiles/lab_05.dir
-/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/CMakeFiles/edit_cache.dir
-/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/CMakeFiles/rebuild_cache.dir
-/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/containers.dir
-/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/edit_cache.dir
-/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/rebuild_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/CMakeFiles/lab_05.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/CMakeFiles/rebuild_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/containers.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/rebuild_cache.dir

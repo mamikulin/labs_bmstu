@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mikemikulin/Desktop/labs/2_sem/lab_05
+CMAKE_SOURCE_DIR = /Users/mikemikulin/desktop/labs/2_sem/lab_05
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build
+CMAKE_BINARY_DIR = /Users/mikemikulin/desktop/labs/2_sem/lab_05/build
 
 # Include any dependencies generated for this target.
 include containers/CMakeFiles/containers.dir/depend.make
@@ -70,32 +70,32 @@ include containers/CMakeFiles/containers.dir/progress.make
 include containers/CMakeFiles/containers.dir/flags.make
 
 containers/CMakeFiles/containers.dir/myset.cpp.o: containers/CMakeFiles/containers.dir/flags.make
-containers/CMakeFiles/containers.dir/myset.cpp.o: /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.cpp
+containers/CMakeFiles/containers.dir/myset.cpp.o: /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myset.cpp
 containers/CMakeFiles/containers.dir/myset.cpp.o: containers/CMakeFiles/containers.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object containers/CMakeFiles/containers.dir/myset.cpp.o"
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT containers/CMakeFiles/containers.dir/myset.cpp.o -MF CMakeFiles/containers.dir/myset.cpp.o.d -o CMakeFiles/containers.dir/myset.cpp.o -c /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object containers/CMakeFiles/containers.dir/myset.cpp.o"
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT containers/CMakeFiles/containers.dir/myset.cpp.o -MF CMakeFiles/containers.dir/myset.cpp.o.d -o CMakeFiles/containers.dir/myset.cpp.o -c /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myset.cpp
 
 containers/CMakeFiles/containers.dir/myset.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/containers.dir/myset.cpp.i"
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.cpp > CMakeFiles/containers.dir/myset.cpp.i
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myset.cpp > CMakeFiles/containers.dir/myset.cpp.i
 
 containers/CMakeFiles/containers.dir/myset.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/containers.dir/myset.cpp.s"
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myset.cpp -o CMakeFiles/containers.dir/myset.cpp.s
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myset.cpp -o CMakeFiles/containers.dir/myset.cpp.s
 
 containers/CMakeFiles/containers.dir/myvector.cpp.o: containers/CMakeFiles/containers.dir/flags.make
-containers/CMakeFiles/containers.dir/myvector.cpp.o: /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myvector.cpp
+containers/CMakeFiles/containers.dir/myvector.cpp.o: /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myvector.cpp
 containers/CMakeFiles/containers.dir/myvector.cpp.o: containers/CMakeFiles/containers.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object containers/CMakeFiles/containers.dir/myvector.cpp.o"
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT containers/CMakeFiles/containers.dir/myvector.cpp.o -MF CMakeFiles/containers.dir/myvector.cpp.o.d -o CMakeFiles/containers.dir/myvector.cpp.o -c /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myvector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object containers/CMakeFiles/containers.dir/myvector.cpp.o"
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT containers/CMakeFiles/containers.dir/myvector.cpp.o -MF CMakeFiles/containers.dir/myvector.cpp.o.d -o CMakeFiles/containers.dir/myvector.cpp.o -c /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myvector.cpp
 
 containers/CMakeFiles/containers.dir/myvector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/containers.dir/myvector.cpp.i"
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myvector.cpp > CMakeFiles/containers.dir/myvector.cpp.i
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myvector.cpp > CMakeFiles/containers.dir/myvector.cpp.i
 
 containers/CMakeFiles/containers.dir/myvector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/containers.dir/myvector.cpp.s"
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers/myvector.cpp -o CMakeFiles/containers.dir/myvector.cpp.s
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers/myvector.cpp -o CMakeFiles/containers.dir/myvector.cpp.s
 
 # Object files for target containers
 containers_OBJECTS = \
@@ -109,19 +109,19 @@ containers/libcontainers.a: containers/CMakeFiles/containers.dir/myset.cpp.o
 containers/libcontainers.a: containers/CMakeFiles/containers.dir/myvector.cpp.o
 containers/libcontainers.a: containers/CMakeFiles/containers.dir/build.make
 containers/libcontainers.a: containers/CMakeFiles/containers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcontainers.a"
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && $(CMAKE_COMMAND) -P CMakeFiles/containers.dir/cmake_clean_target.cmake
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/containers.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mikemikulin/desktop/labs/2_sem/lab_05/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcontainers.a"
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && $(CMAKE_COMMAND) -P CMakeFiles/containers.dir/cmake_clean_target.cmake
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/containers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 containers/CMakeFiles/containers.dir/build: containers/libcontainers.a
 .PHONY : containers/CMakeFiles/containers.dir/build
 
 containers/CMakeFiles/containers.dir/clean:
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers && $(CMAKE_COMMAND) -P CMakeFiles/containers.dir/cmake_clean.cmake
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers && $(CMAKE_COMMAND) -P CMakeFiles/containers.dir/cmake_clean.cmake
 .PHONY : containers/CMakeFiles/containers.dir/clean
 
 containers/CMakeFiles/containers.dir/depend:
-	cd /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mikemikulin/Desktop/labs/2_sem/lab_05 /Users/mikemikulin/Desktop/labs/2_sem/lab_05/containers /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers /Users/mikemikulin/Desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/containers.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/mikemikulin/desktop/labs/2_sem/lab_05/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mikemikulin/desktop/labs/2_sem/lab_05 /Users/mikemikulin/desktop/labs/2_sem/lab_05/containers /Users/mikemikulin/desktop/labs/2_sem/lab_05/build /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers /Users/mikemikulin/desktop/labs/2_sem/lab_05/build/containers/CMakeFiles/containers.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : containers/CMakeFiles/containers.dir/depend
 

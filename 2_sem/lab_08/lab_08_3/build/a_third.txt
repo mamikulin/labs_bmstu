@@ -1,0 +1,5 @@
+12bool first_is_int(std::string a){
+   for(int i = 0; i < 10; i++){
+3       if(int(a[0]) == i+48){
+           return true;}}
+4  return false;}

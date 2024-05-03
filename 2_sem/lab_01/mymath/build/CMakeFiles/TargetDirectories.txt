@@ -1,0 +1,3 @@
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/mymath/build/CMakeFiles/mymath.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/mymath/build/CMakeFiles/edit_cache.dir
+/Users/mikemikulin/desktop/labs/2_sem/lab_01/mymath/build/CMakeFiles/rebuild_cache.dir
