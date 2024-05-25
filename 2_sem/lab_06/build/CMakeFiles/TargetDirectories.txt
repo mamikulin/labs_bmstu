@@ -1,6 +1,0 @@
-/Users/mikemikulin/desktop/labs/2_sem/lab_06/build/CMakeFiles/lab_06.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_06/build/CMakeFiles/edit_cache.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_06/build/CMakeFiles/rebuild_cache.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_06/build/Polynomial/CMakeFiles/Polynomial.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_06/build/Polynomial/CMakeFiles/edit_cache.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_06/build/Polynomial/CMakeFiles/rebuild_cache.dir

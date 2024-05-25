@@ -1,6 +1,0 @@
-/Users/mikemikulin/desktop/labs/2_sem/lab_04/build/CMakeFiles/lab_04.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_04/build/CMakeFiles/edit_cache.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_04/build/CMakeFiles/rebuild_cache.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_04/build/MyStack/CMakeFiles/MyStack.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_04/build/MyStack/CMakeFiles/edit_cache.dir
-/Users/mikemikulin/desktop/labs/2_sem/lab_04/build/MyStack/CMakeFiles/rebuild_cache.dir
