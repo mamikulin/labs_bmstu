@@ -6,7 +6,7 @@
 
 bool first_is_int(std::string a){
     for(int i = 0; i < 10; i++){
-        if(int(a[0]) == i+48){
+        if(int(*(a.begin())) == i+48){
             return true;
         }
     }

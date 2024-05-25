@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab_08_3
+# Target rules for targets named 3
 
 # Build rule for target.
-lab_08_3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab_08_3
-.PHONY : lab_08_3
+3 : cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3
+.PHONY : 3
 
 # fast build rule for target.
-lab_08_3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_08_3.dir/build.make CMakeFiles/lab_08_3.dir/build
-.PHONY : lab_08_3/fast
+3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3.dir/build.make CMakeFiles/3.dir/build
+.PHONY : 3/fast
 
 third.o: third.cpp.o
 .PHONY : third.o
 
 # target to build an object file
 third.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_08_3.dir/build.make CMakeFiles/lab_08_3.dir/third.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3.dir/build.make CMakeFiles/3.dir/third.cpp.o
 .PHONY : third.cpp.o
 
 third.i: third.cpp.i
@@ -142,7 +142,7 @@ third.i: third.cpp.i
 
 # target to preprocess a source file
 third.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_08_3.dir/build.make CMakeFiles/lab_08_3.dir/third.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3.dir/build.make CMakeFiles/3.dir/third.cpp.i
 .PHONY : third.cpp.i
 
 third.s: third.cpp.s
@@ -150,7 +150,7 @@ third.s: third.cpp.s
 
 # target to generate assembly for a file
 third.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_08_3.dir/build.make CMakeFiles/lab_08_3.dir/third.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3.dir/build.make CMakeFiles/3.dir/third.cpp.s
 .PHONY : third.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lab_08_3"
+	@echo "... 3"
 	@echo "... third.o"
 	@echo "... third.i"
 	@echo "... third.s"

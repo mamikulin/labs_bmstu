@@ -11,6 +11,7 @@ void print(std::map<T, T1>& m){
         std::cout << i -> first << " - " << i -> second << '\n';
     }
 }
+
 template <class T, class T1> 
 void summ_and_div(std::map<T, T1>& m){
     double r;

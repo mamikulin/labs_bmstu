@@ -49,6 +49,7 @@ void print(std::vector<std::string> &names, std::vector<std::string> &phones){
     }
     std::cout << '\n';
 }
+
 void fourth_b(){
     std::vector<std::string> names, phones; 
 
@@ -62,8 +63,6 @@ void fourth_b(){
     delete_a(names, phones);
 
     print(names, phones);
-    
-
 }
 
 int main(){

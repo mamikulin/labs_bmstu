@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mikemikulin/desktop/labs/2_sem/lab_06/polynomial/polynomial.cpp" "CMakeFiles/Polynomial.dir/polynomial.cpp.o" "gcc" "CMakeFiles/Polynomial.dir/polynomial.cpp.o.d"
+  "/Users/mikemikulin/desktop/labs/2_sem/lab_08/lab_08_3/third.cpp" "CMakeFiles/3.dir/third.cpp.o" "gcc" "CMakeFiles/3.dir/third.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

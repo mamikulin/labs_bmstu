@@ -7,30 +7,6 @@ class Graduate {
 public:
     std::string name;    // фамилия
     double rating;  // рейтинг
-    Graduate(std::string str){
-        std::vector<int> n; 
-        std::string a, b;
-        bool pre = false; 
-        for(int i = 0; i < str.length(); i++){
-            if (str[i] == ' ' || str[i] == '(' || str[i] == ')' || str[i] == ','  || str[i] == '.'){
-                pre = false;
-            }else if(pre == false){
-                n.push_back(i);
-                pre = true;
-            }
-            
-        }
-
-        for(int i = n[0]; i <= n[1]; i++){
-            a += str[i];
-        }
-        for(int i = n[2]; i <= n[3]; i++){
-            b += str[i];
-        }
-        name = a;
-        rating = std::stod(b);
-        
-    } 
     Graduate() { name = rating = 0; }
     Graduate(std::string name, double rating) { 
         this -> name = name; 
@@ -69,8 +45,8 @@ public:
 
     friend std::ostream& operator<< (std::ostream& out, std::vector<Graduate>& v){
         
-        for(int i = 0; i < v.size(); i++){
-            std::cout << v[i] << '\n';
+        for(auto i = v.begin(); i < v.end(); i++){
+            std::cout << *i << '\n';
         }
 
         return out; 

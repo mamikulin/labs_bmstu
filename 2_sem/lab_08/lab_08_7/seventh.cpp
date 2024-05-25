@@ -16,30 +16,7 @@
 class Point {
 public:
     double x, y;
-    Point(std::string str){
-        std::vector<int> n; 
-        std::string a, b;
-        bool pre = false; 
-        for(int i = 0; i < str.length(); i++){
-            if (str[i] == ' ' || str[i] == '(' || str[i] == ')' || str[i] == ','  || str[i] == '.'){
-                pre = false;
-            }else if(pre == false){
-                n.push_back(i);
-                pre = true;
-            }
-            
-        }
-
-        for(int i = n[0]; i <= n[1]; i++){
-            a += str[i];
-        }
-        for(int i = n[2]; i <= n[3]; i++){
-            b += str[i];
-        }
-        x = std::stod(a);
-        y = std::stod(b);
-        
-    } 
+    
     Point() { x = y = 0; }
     Point(double x, double y) { 
         this -> x = x; 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.23)
 
-set(project "lab_08_3")
+set(project "3")
 project(${project})
 
 set(CMAKE_CXX_STANDARD 17)

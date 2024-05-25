@@ -27,18 +27,6 @@ void delete_a(std::list<std::string>& names, std::list<std::string>& phones){
 
     names.erase(index);
     phones.erase(it_p);
-
-    // int id = find(l, name_d);
-    // if (id == -1){
-    //     return ;
-        
-    // }
-    // std::list<Abonent>::iterator iter = l.begin();
-    // for(int i = 0; i < id; i++){
-    //     iter++;
-    // }
-    // l.erase(iter);
-    // std::cout << '\n';
 }
 
 void add(std::list<std::string>& names, std::list<std::string>& phones){
@@ -57,7 +45,7 @@ void add(std::list<std::string>& names, std::list<std::string>& phones){
 void print(std::list<std::string> &names, std::list<std::string> &phones){
     auto id_n = names.begin();
     auto id_p = phones.begin();
-    for(int i = 0; i < names.size(); i++){
+    while(id_n != names.end()){
         std::cout << *id_n << " - " << *id_p << '\n';
         id_n++; 
         id_p++; 
