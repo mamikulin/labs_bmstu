@@ -1,0 +1,19 @@
+{
+   "users_data": [
+      {
+         "u_id": 777,
+         "tg_name": "Shubham",
+         "admin": 0
+      },
+      {
+         "u_id": 222,
+         "tg_name": "Gaurav",
+         "admin": 0
+      },
+      {
+         "u_id": 225,
+         "tg_name": "Nikhil",
+         "admin": 0
+      }
+   ]
+}

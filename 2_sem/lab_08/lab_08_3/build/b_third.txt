@@ -1,6 +1,0 @@
-12bool first_is_int(std::string a){
-3       if(int(a[0]) == i+48){
-4  return false;}
-2bool first_is_int(std::string a){
-6       if(int(a[0]) == i+48){
-9 return false;}
